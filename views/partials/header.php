@@ -22,8 +22,8 @@
                 <nav class="header__menu">
                     <ul class="header__menu-list">
                         <li class="header__menu-item"><a href="/error-404" class="header__menu-link" title="Перейти к каталогу брендов">Бренды</a></li>
-                        <li class="header__menu-item"><a href="/catalog" class="header__menu-link" title="Перейти к каталогу мужских часов">Мужские</a></li>
-                        <li class="header__menu-item"><a href="/error-404" class="header__menu-link" title="Перейти к каталогу женских часов">Женские</a></li>
+                        <li class="header__menu-item"><a href="/catalog-man" class="header__menu-link" title="Перейти к каталогу мужских часов">Мужские</a></li>
+                        <li class="header__menu-item"><a href="/catalog-woman" class="header__menu-link" title="Перейти к каталогу женских часов">Женские</a></li>
                     </ul>
                 </nav>
                 <ul class="header__icon-menu-list">

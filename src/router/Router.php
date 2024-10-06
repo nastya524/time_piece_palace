@@ -2,15 +2,12 @@
 
 namespace router;
 
-//use core\controllers\MovieController;
-
 use core\controllers\ProductController;
 use services\Helper;
+
 class Router
 {
-
     public static $list = [];
-
     public static function myGet(string $url, string $namePage)
     {
         self::$list[] = [
@@ -18,7 +15,6 @@ class Router
             'namePage' => $namePage
         ];
     }
-
     public static function myPost(string $url, string $controller, string $method)
     {
         self::$list[] = [
@@ -27,7 +23,6 @@ class Router
             'method' => $method
         ];
     }
-
     public static function getContent()
     {
         $rout = $_GET['rout'] ?? '';
@@ -38,8 +33,6 @@ class Router
                 if ($_SERVER['REQUEST_METHOD'] === "GET")
                 {
                     $productController = new ProductController();
-
-
                     switch ($item['namePage'])
                     {
                         case 'home':
@@ -62,7 +55,12 @@ class Router
                             $productController -> getOneProduct($item['namePage'], $_GET['id']);
                             require_once __DIR__ . '/../../views/partials/footer.php';
                             die();
-                        case 'catalog':
+                        case 'catalog-man':
+                            require_once __DIR__ . '/../../views/partials/header.php';
+                            $productController -> getAllProducts($item['namePage']);
+                            require_once __DIR__ . '/../../views/partials/footer.php';
+                            die();
+                        case 'catalog-woman':
                             require_once __DIR__ . '/../../views/partials/header.php';
                             $productController -> getAllProducts($item['namePage']);
                             require_once __DIR__ . '/../../views/partials/footer.php';

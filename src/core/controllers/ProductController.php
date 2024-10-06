@@ -3,23 +3,28 @@
 namespace core\controllers;
 
 use core\models\Product;
+use view\View;
 
 class ProductController
 {
 
+    public $view;
+    public $products;
+
+    public function __construct()
+    {
+        $this->view = new View(__DIR__ . '/../../../views');
+        $this->products = new Product();
+    }
+
     public function getAllProducts($namePage)
     {
-        $product = new Product();
-        $data = $product -> getAllProducts();
-        require_once __DIR__ . '/../../../views/pages/' . $namePage . '.php';
+        return $this->view->render("pages/$namePage.php", ['data' => $this->products->getAllProducts()]);
     }
 
     public function getOneProduct($namePage, $id)
     {
-        $product = new Product();
-        $data = $product -> getOneProduct($id);
-
-        require_once __DIR__ . '/../../../views/pages/' . $namePage . '.php';
+        return $this->view->render("pages/$namePage.php", ['data' => $this->products->getOneProduct($id)]);
     }
 
 }
