@@ -8,6 +8,7 @@
     require __DIR__ . "/src/core/controllers/AdminController.php";
     require __DIR__ . "/src/core/controllers/ProductController.php";
     require __DIR__ . "/src/core/models/User.php";
+    require __DIR__ . "/src/view/View.php";
     require __DIR__ . "/src/core/models/Admin.php";
     require __DIR__ . "/src/core/models/Product.php";
     require __DIR__ . "/src/router/Router.php";
