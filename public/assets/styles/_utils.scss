@@ -1,0 +1,27 @@
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+.no-scroll {
+  overflow-y: scroll; /* Разрешает видимость полосы прокрутки */
+  position: fixed; /* Запрещает прокрутку страницы */
+  width: 100%; /* Фиксирует ширину страницы */
+  top: calc(-1 * var(--scroll-position)); /* Запоминает место прокрутки */
+}
+//.hidden-mobile {
+//  @include mobile {
+//    display: none !important;
+//  }
+//}
+
+//.visible-mobile {
+//  @include mobile-above {
+//    display: none !important;
+//  }
+//}

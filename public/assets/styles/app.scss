@@ -1,0 +1,46 @@
+@import
+  'normalize',
+  'fonts',
+  'mixins',
+  'media',
+  'variables',
+  'utils',
+  'globals';
+
+@import "blocks/header",
+
+  "blocks/admin-modal",
+  "blocks/form-registration",
+  "blocks/form-log-in",
+  "blocks/input",
+  "blocks/button",
+  "blocks/tab",
+  "blocks/product-card",
+
+  "blocks/pages/section",
+
+  "blocks/pages/profile/profile",
+
+  "blocks/pages/home/hero",
+  "blocks/pages/home/features",
+  "blocks/pages/home/novelty",
+  "blocks/pages/home/about-store",
+
+  "blocks/pages/registration/registration",
+
+  "blocks/pages/log-in/log-in",
+
+  "blocks/pages/error-404/error-404",
+
+  "blocks/pages/product-single/product-single",
+  "blocks/pages/product-single/product-description",
+
+  "blocks/pages/catalog/catalog",
+  "blocks/pages/catalog/filters",
+
+  "blocks/pages/admin/admin-panel";
+//.header {
+//  margin-bottom: 50px;
+//}
+
+@import "blocks/footer";

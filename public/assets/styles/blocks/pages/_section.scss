@@ -1,0 +1,16 @@
+.section {
+  &__body {
+    padding-block: var(--section-padding-y);
+    border-inline: var(--border);
+    border-bottom: var(--border);
+    &--non-border {
+      border: 0;
+      padding: 0;
+    }
+  }
+  &:last-of-type {
+    & .section__body:last-child {
+      border-bottom: none;
+    }
+  }
+}

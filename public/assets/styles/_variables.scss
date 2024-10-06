@@ -1,0 +1,36 @@
+:root {
+  --color-dark: #000;
+  --color-light: #fff;
+  --color-accent: #0057AB;
+
+  --border: 1px solid var(--color-dark);
+  --border-radius: 3px;
+  //--border-radius-small: 7px;
+  //--border-radius-large: 45px;
+
+  --button-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.7);
+
+  --font-family-base: 'Eurostile', sans-serif;
+
+  --container-width: 1348px;
+  --container-padding-x: 20px;
+
+  --section-padding-y: 20px;
+
+  --standart-margin-y: 20px;
+
+  --input-height: 58px;
+  --button-height: 44px;
+
+  --transition-duration: 0.2s;
+
+  --scroll-position: 0;
+
+  //@include desktop {
+  //  --section-padding-y: 50px;
+  //}
+  //
+  //@include mobile {
+  //  --section-padding-y: 30px;
+  //}
+}

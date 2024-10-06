@@ -1,0 +1,17 @@
+.hero {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-inline: 6px;
+  }
+  &__subtitle {
+    text-transform: uppercase;
+  }
+  &__img {
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-bottom: var(--standart-margin-y);
+  }
+}

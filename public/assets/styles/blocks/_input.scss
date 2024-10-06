@@ -1,0 +1,29 @@
+.input {
+  height: var(--input-height);
+  width: 100%;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: transparent;
+  font-size: 15px;
+  padding-inline: 20px;
+  &--textarea-modal-admin {
+    resize: none;
+    height: calc(var(--input-height) * 2);
+    padding-block: 10px;
+    padding-inline: 15px;
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50px;
+      background-color: #0057AB;
+    }
+
+  }
+  &--modal-admin {
+    height: calc(var(--input-height) / 2);
+    padding-inline: 15px;
+  }
+
+}

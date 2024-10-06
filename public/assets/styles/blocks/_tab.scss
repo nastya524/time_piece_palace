@@ -1,0 +1,8 @@
+.tab {
+  &__content {
+    pointer-events: none;
+  }
+  &__pane:not(.tab__show) {
+    display: none;
+  }
+}

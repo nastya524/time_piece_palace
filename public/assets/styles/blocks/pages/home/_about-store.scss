@@ -1,0 +1,26 @@
+.about-store {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 35px;
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    column-gap: 20px;
+    padding-right: 20px;
+  }
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: var(--standart-margin-y);
+  }
+  &__img {
+    height: auto;
+    border-radius: var(--border-radius);
+    margin-left: 6px;
+  }
+  &__description {
+    max-width: 775px;
+    font-size: 18px;
+  }
+}
