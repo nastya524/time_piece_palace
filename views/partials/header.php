@@ -21,7 +21,7 @@
                 </a>
                 <nav class="header__menu">
                     <ul class="header__menu-list">
-                        <li class="header__menu-item"><a href="/error-404" class="header__menu-link" title="Перейти к каталогу брендов">Бренды</a></li>
+                        <li class="header__menu-item"><a href="/brands" class="header__menu-link" title="Перейти к каталогу брендов">Бренды</a></li>
                         <li class="header__menu-item"><a href="/catalog-man" class="header__menu-link" title="Перейти к каталогу мужских часов">Мужские</a></li>
                         <li class="header__menu-item"><a href="/catalog-woman" class="header__menu-link" title="Перейти к каталогу женских часов">Женские</a></li>
                     </ul>
@@ -29,6 +29,7 @@
                 <ul class="header__icon-menu-list">
                     <?php
                     if(!isset($_SESSION["user"])) {
+                        // TODO: нада переделать хедер тама, где вход в аккаунт && добавить имя/фамилию в БД отд полями
                     ?>
                         <li class="header__icon-menu-item">
                             <a href="/registration" class="header__icon-menu-link">
@@ -37,17 +38,6 @@
                                      src="public/assets/media/svg/cart.svg"
                                      alt="Перейти в корзину"
                                      title="Перейти в корзину"
-                                     width="40" height="40" loading="lazy"
-                                >
-                            </a>
-                        </li>
-                        <li class="header__icon-menu-item">
-                            <a href="/catalog" class="header__icon-menu-link">
-                                <span class="visually-hidden">Перейти в каталог</span>
-                                <img class="header__icon-menu-img"
-                                     src="public/assets/media/svg/catalog.svg"
-                                     alt="Перейти в каталог"
-                                     title="Перейти в каталог"
                                      width="40" height="40" loading="lazy"
                                 >
                             </a>
@@ -61,6 +51,7 @@
                                      title="Зарегистрироваться"
                                      width="40" height="40" loading="lazy"
                                 >
+                                <div class="header__menu-login">Войти</div>
                             </a>
                         </li>
                     <?php
@@ -73,17 +64,6 @@
                                      src="public/assets/media/svg/cart.svg"
                                      alt="Перейти в корзину"
                                      title="Перейти в корзину"
-                                     width="40" height="40" loading="lazy"
-                                >
-                            </a>
-                        </li>
-                        <li class="header__icon-menu-item">
-                            <a href="/catalog" class="header__icon-menu-link">
-                                <span class="visually-hidden">Перейти в каталог</span>
-                                <img class="header__icon-menu-img"
-                                     src="public/assets/media/svg/catalog.svg"
-                                     alt="Перейти в каталог"
-                                     title="Перейти в каталог"
                                      width="40" height="40" loading="lazy"
                                 >
                             </a>

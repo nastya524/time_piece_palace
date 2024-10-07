@@ -317,6 +317,9 @@ h1, h2, h3, h4 {
     border: var(--border);
   }
 }
+.header__menu-login{
+  font-weight: 500;
+}
 
 .modal-admin {
   display: none;
@@ -897,7 +900,6 @@ h1, h2, h3, h4 {
   font-weight: 400;
   font-size: 20px;
   padding-bottom: 20px;
-  margin-left: 223px;
 }
 .catalog__content {
   display: flex;
@@ -906,12 +908,14 @@ h1, h2, h3, h4 {
 .catalog__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  max-width: 1125px;
+  justify-content: space-between;
+  width: 1346px;
 }
 .catalog__item {
   position: relative;
   width: 33.3333333333%;
+  display: flex; /* Включаем Flexbox */
+  justify-content: center; /* Горизонтальная центровка */
 }
 .catalog__item:after, .catalog__item:before {
   content: "";
@@ -936,13 +940,6 @@ h1, h2, h3, h4 {
   padding-block: 20px;
   border-left: var(--border);
 }
-
-.filters {
-  min-width: 223px;
-  max-width: 223px;
-  border-right: var(--border);
-}
-
 .admin-panel {
   min-height: 600px;
 }
@@ -1036,6 +1033,74 @@ h1, h2, h3, h4 {
   align-items: flex-end;
   justify-content: center;
   row-gap: 20px;
+}
+
+.brands {
+  margin-bottom: -20px;
+}
+.brands__title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+.brands__content {
+  display: flex;
+  border-top: var(--border);
+}
+.brands__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 1346px;
+}
+.brands__item {
+  position: relative;
+  width: 33.3333333333%;
+  display: flex; /* Включаем Flexbox */
+  justify-content: center; /* Горизонтальная центровка */
+}
+.brands__item:after, .brands__item:before {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  transition-duration: inherit;
+}
+.brands__item:after {
+  width: 100.2%;
+  height: 1px;
+}
+.brands__item:not(:nth-child(3n))::before {
+  top: 0;
+  left: 100%;
+  width: 1px;
+  height: 100%;
+}
+.brand-card {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  max-width: 419px;
+}
+.brand-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.brand-card__link {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.brand-card__title{
+  font-size: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+@media (hover: hover) {
+  .brand-card__link:hover {
+    transform: scale(102%);
+  }
 }
 
 .footer {

@@ -11,6 +11,7 @@ Router::myGet('/product-single.php', 'product-single');
 Router::myGet('/catalog-man', 'catalog-man');
 Router::myGet('/catalog-woman', 'catalog-woman');
 Router::myGet('/cart', 'cart');
+Router::myGet('/brands', 'brands');
 Router::myGet('/error-404', 'error-404');
 Router::myGet('/admin-panel', 'admin');
 Router::myPost('/auth/registration', \core\controllers\UserController::class, 'registration');

@@ -4,9 +4,6 @@
             <div class="catalog">
                 <h1 class="catalog__title">Женские часы</h1>
                 <div class="catalog__content">
-                    <div class="filters section">
-                        <div class="filters__content"><p>Диаметр/ширина</p></div>
-                    </div>
                     <ul class="catalog__list">
                         <?php foreach ($data as $item) {
                             if ($item['name_category'] == 'Женские') { ?>
@@ -30,22 +27,24 @@
                                                 ?>В наличии<?php
                                             }
                                             ?>
-                                        </span>
+                                            </span>
                                             <div class="product-card__cart-inner">
                                                 <span class="product-card__price"><?=\services\Helper::addSpaceBasedOnLength($item['price'])?> р</span>
                                                 <?php
-                                                if(!isset($_SESSION["user"])) {
-                                                    ?>
-                                                    <form class="product-card__in-cart" action="/registration" method="get">
-                                                        <button class="product-card__button button button--in-cart-catalog" type="submit" title="Добавить товар в корзину">В корзину</button>
-                                                    </form>
-                                                    <?php
-                                                } else {
-                                                    ?>
-                                                    <form class="product-card__in-cart" action="" method="post">
-                                                        <button class="product-card__button button button--in-cart-catalog" type="submit" title="Добавить товар в корзину">В корзину</button>
-                                                    </form>
-                                                    <?php
+                                                if($item['amoynt_product'] != 0) {
+                                                    if(!isset($_SESSION["user"])) {
+                                                        ?>
+                                                        <form class="product-card__in-cart" action="/registration" method="get">
+                                                            <button class="product-card__button button button--in-cart-catalog" type="submit" title="Добавить товар в корзину">В корзину</button>
+                                                        </form>
+                                                        <?php
+                                                    } else {
+                                                        ?>
+                                                        <form class="product-card__in-cart" action="" method="post">
+                                                            <button class="product-card__button button button--in-cart-catalog" type="submit" title="Добавить товар в корзину">В корзину</button>
+                                                        </form>
+                                                        <?php
+                                                    }
                                                 }
                                                 ?>
                                             </div>

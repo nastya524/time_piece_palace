@@ -38,18 +38,20 @@
                             </div>
                             <span class="product-single__price"><?=\services\Helper::addSpaceBasedOnLength($data['price'])?> р</span>
                             <?php
-                            if(!isset($_SESSION["user"])) {
-                            ?>
-                                <form class="product-single__in-cart" action="/registration" method="get">
-                                    <button class="product-single__button button button--in-cart" type="submit" title="Добавить товар в корзину">В корзину</button>
-                                </form>
-                                <?php
-                            } else {
-                            ?>
-                                <form class="product-single__in-cart" action="" method="post">
-                                    <button class="product-single__button button button--in-cart" type="submit" title="Добавить товар в корзину">В корзину</button>
-                                </form>
-                            <?php
+                            if($data['amoynt_product'] != 0){
+                                if(!isset($_SESSION["user"])) {
+                                    ?>
+                                    <form class="product-single__in-cart" action="/registration" method="get">
+                                        <button class="product-single__button button button--in-cart" type="submit" title="Добавить товар в корзину">В корзину</button>
+                                    </form>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <form class="product-single__in-cart" action="" method="post">
+                                        <button class="product-single__button button button--in-cart" type="submit" title="Добавить товар в корзину">В корзину</button>
+                                    </form>
+                                    <?php
+                                }
                             }
                             ?>
                             <div class="product-single__description">

@@ -70,6 +70,11 @@ class Router
                             require_once __DIR__ . '/../../views/pages/' . $item['namePage'] . '.php';
                             require_once __DIR__ . '/../../views/partials/footer.php';
                             die();
+                        case 'brands':
+                            require_once __DIR__ . '/../../views/partials/header.php';
+                            require_once __DIR__ . '/../../views/pages/' . $item['namePage'] . '.php';
+                            require_once __DIR__ . '/../../views/partials/footer.php';
+                            die();
                         case 'error-404':
                             require_once __DIR__ . '/../../views/partials/header.php';
                             require_once __DIR__ . '/../../views/pages/' . $item['namePage'] . '.php';
