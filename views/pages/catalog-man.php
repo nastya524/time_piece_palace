@@ -6,11 +6,10 @@
                 <div class="catalog__content">
                     <ul class="catalog__list">
                         <?php foreach ($data as $item) {
-                            // TODO: я здесь выровнять текст карточки
                             if ($item['name_category'] == 'Мужские') { ?>
                                 <li class="catalog__item">
                                     <article class="product-card">
-                                        <a class="product-card__link" href="product-single.php?id=<?=$item['id']?>" title="Перейти на страницу товара <?=$item['name_product']?> и посмотреть характеристики..">
+                                        <a class="product-card__link" href="product-single.php?id=<?=$item['id_product']?>" title="Перейти на страницу товара <?=$item['name_product']?> и посмотреть характеристики..">
                                             <img
                                                     class="product-card__image"
                                                     src="<?=$item['img_path']?>"
@@ -40,10 +39,9 @@
                                                         </form>
                                                         <?php
                                                     } else {
+                                                        $userId = $_SESSION['user']['id'];
                                                         ?>
-                                                        <form class="product-card__in-cart" action="" method="post">
-                                                            <button class="product-card__button button button--in-cart-catalog" type="submit" title="Добавить товар в корзину">В корзину</button>
-                                                        </form>
+                                                        <button onclick="addToCart(<?=$item['id_product']?>, '<?=$item['name_product']?>', <?=$item['price']?>, <?=$userId?>, '<?=$item['img_path']?>', <?=$item['amoynt_product']?>)" class="product-card__button button button--in-cart-catalog" type="submit" title="Добавить товар в корзину">В корзину</button>
                                                         <?php
                                                     }
                                                 }
@@ -60,3 +58,4 @@
         </div>
     </section>
 </main>
+<script defer src="public/assets/js/cart-view.js"></script>

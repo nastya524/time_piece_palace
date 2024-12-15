@@ -8,7 +8,7 @@ use services\Helper;
 class User
 {
 
-    public function registerUser( $email, $password, $password_confirm)
+    public function registerUser($email, $first_name, $last_name, $password, $password_confirm)
     {
 
         if(!filter_var($email, FILTER_VALIDATE_EMAIL))
@@ -32,7 +32,7 @@ class User
             Helper::redirect('/registration');
         }
         $password = password_hash($password, PASSWORD_DEFAULT);
-        $query = Connect::Connect()->query("INSERT INTO `user`(`id`, `email`, `password`) VALUES (NULL,'$email','$password')");
+        $query = Connect::Connect()->query("INSERT INTO `user`(`first_name`, `last_name`, `email`, `password`) VALUES ('$first_name', '$last_name', '$email','$password')");
     }
 
     public function loginUser($email, $password)
@@ -60,7 +60,9 @@ class User
         if(password_verify($password, $user['password'])) {
             session_start();
             $_SESSION["user"] = [
-              'id' => $user['id'],
+              'id' => $user['id_user'],
+              'first_name' => $user['first_name'],
+              'last_name' => $user['last_name'],
               'email' => $user['email'],
               'password' => $user['password'],
               'role' => $user['role']

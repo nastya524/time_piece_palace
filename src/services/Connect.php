@@ -1,27 +1,22 @@
 <?php
 namespace services;
-
 class Connect
 {
-
     public static function Connect()
     {
-
-        $db = mysqli_connect(
+        $timePiece = mysqli_connect(
             '127.0.0.1:3306',
             'root',
             '',
-            'chasi'
+            'timePiece'
         );
-
-        if (!$db)
+        if (!$timePiece)
         {
             die('нет соединения с бд');
         }
         else
         {
-            return $db;
+            return $timePiece;
         }
-
     }
 }

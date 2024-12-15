@@ -21,4 +21,5 @@ Router::myPost('/admin-panel/add-product', \core\controllers\AdminController::cl
 Router::myPost('/admin-panel/delete-product', \core\controllers\AdminController::class, 'deleteDataProduct');
 Router::myPost('/admin-panel/update-product', \core\controllers\AdminController::class, 'updateDataProduct');
 Router::myPost('/getOneProduct', \core\models\Admin::class, 'getOneProduct');
+Router::myPost('/checkout', \core\controllers\OrderController::class, 'createOrder');
 Router::getContent();
