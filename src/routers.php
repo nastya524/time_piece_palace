@@ -11,6 +11,7 @@ Router::myGet('/product-single.php', 'product-single');
 Router::myGet('/catalog-man', 'catalog-man');
 Router::myGet('/catalog-woman', 'catalog-woman');
 Router::myGet('/cart', 'cart');
+Router::myGet('/brands', 'brands');
 Router::myGet('/error-404', 'error-404');
 Router::myGet('/admin-panel', 'admin');
 Router::myPost('/auth/registration', \core\controllers\UserController::class, 'registration');
@@ -20,4 +21,5 @@ Router::myPost('/admin-panel/add-product', \core\controllers\AdminController::cl
 Router::myPost('/admin-panel/delete-product', \core\controllers\AdminController::class, 'deleteDataProduct');
 Router::myPost('/admin-panel/update-product', \core\controllers\AdminController::class, 'updateDataProduct');
 Router::myPost('/getOneProduct', \core\models\Admin::class, 'getOneProduct');
+Router::myPost('/checkout', \core\controllers\OrderController::class, 'createOrder');
 Router::getContent();

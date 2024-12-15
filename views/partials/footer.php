@@ -4,13 +4,13 @@
                 <div class="footer__left-container">
                     <ul class="footer__menu-list">
                         <li class="footer__menu-item">
-                            <a href="/error-404" class="footer__menu-link" title="Перейти к каталогу брендов">Бренды</a>
+                            <a href="/brands" class="footer__menu-link" title="Перейти к каталогу брендов">Бренды</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="/catalog" class="footer__menu-link" title="Перейти к каталогу мужских часов">Мужские</a>
+                            <a href="/catalog-man" class="footer__menu-link" title="Перейти к каталогу мужских часов">Мужские</a>
                         </li>
                         <li class="footer__menu-item">
-                            <a href="/error-404" class="footer__menu-link" title="Перейти к каталогу женских часов">Женские</a>
+                            <a href="/catalog-woman" class="footer__menu-link" title="Перейти к каталогу женских часов">Женские</a>
                         </li>
                     </ul>
                     <div class="footer__extra">

@@ -2,14 +2,15 @@
     <section class="section container">
         <div class="section__body">
             <div class="catalog">
-                <h1 class="catalog__title">Мужские часы</h1>
+                <h1 class="catalog__title">Женские часы</h1>
                 <div class="catalog__content">
                     <ul class="catalog__list">
                         <?php foreach ($data as $item) {
-                            if ($item['name_category'] == 'Мужские') { ?>
+                            if ($item['name_category'] == 'Женские') { ?>
                                 <li class="catalog__item">
                                     <article class="product-card">
-                                        <a class="product-card__link" href="product-single.php?id=<?=$item['id_product']?>" title="Перейти на страницу товара <?=$item['name_product']?> и посмотреть характеристики..">
+                                        <a class="product-card__link" href="product-single.php?id=<?=$item['id_product']?>" title="Перейти на страницу товара
+                                         <?=$item['name_product']?> и посмотреть характеристики..">
                                             <img
                                                     class="product-card__image"
                                                     src="<?=$item['img_path']?>"
@@ -35,7 +36,8 @@
                                                     if(!isset($_SESSION["user"])) {
                                                         ?>
                                                         <form class="product-card__in-cart" action="/registration" method="get">
-                                                            <button class="product-card__button button button--in-cart-catalog" type="submit" title="Добавить товар в корзину">В корзину</button>
+                                                            <button class="product-card__button button button--in-cart-catalog" type="submit" title="Добавить 
+                                                            товар в корзину">В корзину</button>
                                                         </form>
                                                         <?php
                                                     } else {

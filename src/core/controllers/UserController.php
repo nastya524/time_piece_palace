@@ -11,10 +11,12 @@ class UserController
     public function registration()
     {
         $email = $_POST['email'];
+        $first_name = $_POST['firstName'];
+        $last_name = $_POST['lastName'];
         $password = $_POST['password'];
         $password_confirm = $_POST['password_confirm'];
         $User = new User();
-        $User -> registerUser( $email, $password, $password_confirm);
+        $User -> registerUser($email, $first_name, $last_name, $password, $password_confirm);
         Helper::redirect('/log-in');
     }
 

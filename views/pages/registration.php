@@ -8,7 +8,6 @@
                 <div class="registration">
                     <div class="registration__content">
                         <h1 class="registration__title">Регистрация</h1>
-
                         <form class="form-registration" action="/auth/registration" method="post">
                             <div class="form-registration__wrapper">
                                 <label class="visually-hidden" for="login">Электронная почта</label>
@@ -22,7 +21,30 @@
                                     <?= Helper::validationErrorAttr('email'); ?>
                                         required
                                 >
-
+                            </div>
+                            <div class="form-registration__wrapper form-registration-min">
+                                <label class="visually-hidden" for="firstName">Имя</label>
+                                <input
+                                        class="form-registration__input input"
+                                        type="text"
+                                        name="firstName"
+                                        placeholder="Имя"
+                                        minlength="3"
+                                        value="<?php echo Helper::old('firstName') ?>"
+                                    <?= Helper::validationErrorAttr('firstName'); ?>
+                                        required
+                                >
+                                <label class="visually-hidden" for="lastName">Фамилия</label>
+                                <input
+                                        class="form-registration__input input"
+                                        type="text"
+                                        name="lastName"
+                                        placeholder="Фамилия"
+                                        minlength="3"
+                                        value="<?php echo Helper::old('lastName') ?>"
+                                    <?= Helper::validationErrorAttr('lastName'); ?>
+                                        required
+                                >
                             </div>
                             <div class="form-registration__wrapper">
                                 <label class="visually-hidden" for="password">Пароль</label>
@@ -38,7 +60,6 @@
                                 >
     <!--                            <a href="#" class="user-pass-control"></a>-->
                             </div>
-
                             <div class="form-registration__wrapper">
                                 <label class="visually-hidden" for="user-password-confirm">Подтверждение пароля</label>
                                 <input
@@ -52,7 +73,6 @@
                                 >
     <!--                            <a href="#" class="user-pass-control"></a>-->
                             </div>
-
                             <div class="form-registration__button-wrapper">
                                 <button id="reg-button" class="form-registration__button button" type="submit">Зарегистрироваться</button>
                             </div>

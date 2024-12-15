@@ -40,12 +40,12 @@ use core\models\Admin;
                                                 ?>Нет в наличии<?php
                                             }
                                             else {
-                                                ?>В наличии<?php
+                                                echo $item['amoynt_product'] . " шт.";
                                             }
                                             ?>
                                         </h4>
                                         <h3 class="admin-panel__block-title">О бренде</h3>
-                                        <p><?=$item['brand_description']?></p>
+                                        <p><?=$item['name_brand_description']?></p>
                                     </div>
                                     <div class="admin-panel__block">
                                         <h3 class="admin-panel__block-title">Название</h3>
@@ -53,16 +53,16 @@ use core\models\Admin;
                                         <h3 class="admin-panel__block-title">Характеристики</h3>
                                         <p>
                                             Пол: Мужские<br>
-                                            Пол: <?=$item['style']?><br>
-                                            Страна: <?=$item['country']?><br>
-                                            Водостойкость: <?=$item['water_resistance']?><br>
-                                            Коллекция: <?=$item['style']?><br>
+                                            Страна: <?=$item['name_country']?><br>
+                                            Водостойкость: <?=$item['name_resistance']?><br>
+                                            Коллекция: <?=$item['collection_name']?><br>
+                                            Стиль: <?=$item['name_style']?><br>
                                         </p>
                                     </div>
                                     <div class="admin-panel__block admin-panel__block--buttons">
-                                        <button class="admin-panel__button button button--modal-admin openModalUpdateProduct" data-id-product="<?=$item['id']?>">Изменить</button>
+                                        <button class="admin-panel__button button button--modal-admin openModalUpdateProduct" data-id-product="<?=$item['id_product']?>">Изменить</button>
                                         <form class="admin-panel__form-delete" action="/admin-panel/delete-product" method="post">
-                                            <input type="hidden" name="id_product" value="<?=$item['id']?>">
+                                            <input type="hidden" name="id_product" value="<?=$item['id_product']?>">
                                             <button class="admin-panel__button button button--modal-admin">Удалить</button>
                                         </form>
                                     </div>
@@ -103,12 +103,12 @@ use core\models\Admin;
                                                 ?>Нет в наличии<?php
                                             }
                                             else {
-                                                ?>В наличии<?php
+                                                echo $item['amoynt_product'] . " шт.";
                                             }
                                             ?>
                                         </h4>
                                         <h3 class="admin-panel__block-title">О бренде</h3>
-                                        <p><?=$item['brand_description']?></p>
+                                        <p><?=$item['name_brand_description']?></p>
                                     </div>
                                     <div class="admin-panel__block">
                                         <h3 class="admin-panel__block-title">Название</h3>
@@ -116,16 +116,16 @@ use core\models\Admin;
                                         <h3 class="admin-panel__block-title">Характеристики</h3>
                                         <p>
                                             Пол: Женские<br>
-                                            Пол: <?=$item['style']?><br>
-                                            Страна: <?=$item['country']?><br>
-                                            Водостойкость: <?=$item['water_resistance']?><br>
-                                            Коллекция: <?=$item['style']?><br>
+                                            Страна: <?=$item['name_country']?><br>
+                                            Водостойкость: <?=$item['name_resistance']?><br>
+                                            Коллекция: <?=$item['collection_name']?><br>
+                                            Стиль: <?=$item['name_style']?><br>
                                         </p>
                                     </div>
                                     <div class="admin-panel__block admin-panel__block--buttons">
-                                        <button class="admin-panel__button button button--modal-admin openModalUpdateProduct" data-id-product="<?=$item['id']?>">Изменить</button>
+                                        <button class="admin-panel__button button button--modal-admin openModalUpdateProduct" data-id-product="<?=$item['id_product']?>">Изменить</button>
                                         <form class="admin-panel__form-delete" action="/admin-panel/delete-product" method="post">
-                                            <input type="hidden" name="id_product" value="<?=$item['id']?>">
+                                            <input type="hidden" name="id_product" value="<?=$item['id_product']?>">
                                             <button class="admin-panel__button button button--modal-admin">Удалить</button>
                                         </form>
                                     </div>

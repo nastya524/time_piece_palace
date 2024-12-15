@@ -38,18 +38,20 @@
                             </div>
                             <span class="product-single__price"><?=\services\Helper::addSpaceBasedOnLength($data['price'])?> р</span>
                             <?php
-                            if(!isset($_SESSION["user"])) {
-                            ?>
-                                <form class="product-single__in-cart" action="/registration" method="get">
-                                    <button class="product-single__button button button--in-cart" type="submit" title="Добавить товар в корзину">В корзину</button>
-                                </form>
-                                <?php
-                            } else {
-                            ?>
-                                <form class="product-single__in-cart" action="" method="post">
-                                    <button class="product-single__button button button--in-cart" type="submit" title="Добавить товар в корзину">В корзину</button>
-                                </form>
-                            <?php
+                            if($data['amoynt_product'] != 0){
+                                if(!isset($_SESSION["user"])) {
+                                    ?>
+                                    <form class="product-single__in-cart" action="/registration" method="get">
+                                        <button class="product-single__button button button--in-cart" type="submit" title="Добавить товар в корзину">В корзину</button>
+                                    </form>
+                                    <?php
+                                } else {
+                                    ?>
+                                    <form class="product-single__in-cart" action="" method="post">
+                                        <button class="product-single__button button button--in-cart" type="submit" title="Добавить товар в корзину">В корзину</button>
+                                    </form>
+                                    <?php
+                                }
                             }
                             ?>
                             <div class="product-single__description">
@@ -74,38 +76,30 @@
                                     <span><?=$data['name_category']?></span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Бренд:
-                                    <span><?=$data['collection_name']?></span>
+                                    <span>Будет позже</span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Страна:
-                                    <span><?=$data['country']?></span>
+                                    <span><?=$data['name_country']?></span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Водостойкость:
-                                    <span><?=$data['water_resistance']?></span>
+                                    <span><?=$data['name_resistance']?></span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Коллекция:
                                     <span><?=$data['collection_name']?></span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Стиль:
-                                    <span><?=$data['style']?></span>
+                                    <span><?=$data['name_style']?></span>
                                 </h3>
                             </div>
                             <div class="product-description__specifications-inner">
                                 <h3 class="product-description__characteristic">Механизм:
-                                    <span><?=$data['mechanism']?></span>
+                                    <span><?=$data['name_mechanism']?></span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Модель механизма:
                                     <span><?=$data['model_mechaism']?></span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Камней в механизме:
-                                    <span>
-                                        <?php if ($data['amount_stones'] == 0) {
-                                            ?>Неизвестно<?php
-                                        }
-                                        else {
-                                            ?><?=$data['amount_stones']?><?php
-                                        }
-                                        ?>
-                                    </span>
+                                    <span><?=$data['amount_stones']?></span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Диаметр корпуса:
                                     <span>
@@ -119,15 +113,15 @@
                                     </span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Цвет корпуса:
-                                    <span><?=$data['case_color']?></span>
+                                    <span><?=$data['name_case_color']?></span>
                                 </h3>
                                 <h3 class="product-description__characteristic">Цвет циферблата:
-                                    <span><?=$data['dial_color']?></span>
+                                    <span><?=$data['name_dial_color']?></span>
                                 </h3>
                             </div>
                         </div>
                         <div class="product-description__brand tab__pane" data-id="1">
-                            <p><?=$data['brand_description']?></p>
+                            <p><?=$data['name_brand_description']?></p>
                         </div>
                     </div>
                 </div>
